@@ -12,7 +12,8 @@ define('ralltiir-application', function (require) {
 });
 
 require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], function (rt, Service, View) {
-    View.backHTML = '<i class="fa fa-arrow-left"></i>';
+    Service.setBackHtml('<i class="fa fa-arrow-left"></i>');
+
     rt.services.register('/ralltiir-application-demo/home', {title: 'Ralltiir Application'}, Service);
     rt.services.register('/ralltiir-application-demo-vue/todolist', {
         title: 'Vue Todo List',
