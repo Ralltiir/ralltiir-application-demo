@@ -1,6 +1,6 @@
 require.config({
-  baseUrl: /rt-debug/.test(location.search) ? 'amd_modules' : '//unpkg.cnpmjs.org',
-  waitSeconds: 30
+    baseUrl: /rt-debug/.test(location.search) ? 'amd_modules' : '//unpkg.com',
+    waitSeconds: 30
 });
 
 // apmjs auto-creates these entries when installed locally
@@ -24,6 +24,7 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
         backendUrl: '/ralltiir-application-demo-react/todolist'
     }, Service);
     rt.services.register('/ralltiir-application-demo/scroll-restore', {title: 'Scroll Restore'}, Service);
+    rt.services.register('/ralltiir-application-demo/performance', {title: 'Performance'}, Service);
     rt.services.register('/ralltiir-application-demo/partial-update', {title: 'Partial Update'}, Service);
     rt.services.register('/ralltiir-application-demo/partial-update-advanced', {title: 'Partial Update'}, Service);
 
