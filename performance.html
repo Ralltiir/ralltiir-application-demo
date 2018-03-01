@@ -27,8 +27,12 @@
         </div>
       </div>
       <div class="rt-body">
+        <div class="info"></div>
+        <p>详情请参考 <a href="https://ralltiir.github.io/ralltiir/advanced/performance.html">Performance API 文档</a></p>
         <script>
-            var rt = document.querySelector('.performance').ralltiir;
+            var view = document.querySelector('.performance');
+            var infoEl = view.querySelector('.info');
+            var rt = view.ralltiir;
             var lastTime = 0;
 
             if (rt) {
@@ -37,16 +41,17 @@
                 info += log('Request Start', perf.requestStart);
                 info += log('DOM Loading', perf.domLoading);
                 info += log('Head Interactive', perf.headInteractive);
-                rt.bodyEl.innerHTML = info;
+                info += log('Content Loaded', perf.domContentLoaded);
+                infoEl.innerHTML = info;
 
                 // DOM still not interactive during this script
-                setTimeout(function() {
-                    rt.bodyEl.innerHTML += log('DOM Interactive', perf.domInteractive);
+                view.addEventListener('rt.attached', function () {
+                    infoEl.innerHTML += log('DOM Interactive', perf.domInteractive);
                 });
             }
             else {
                 var info = 'This page is renderd by browser, thus ralltiir performance not available.';
-                document.querySelector('.performance .rt-body').innerHTML = info;
+                infoEl.innerHTML = info;
             }
 
             function log(title, time) {
