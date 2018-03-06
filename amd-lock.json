@@ -1,0 +1,23 @@
+{
+  "name": "ralltiir-demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "@searchfe/assert": {
+      "version": "1.0.0"
+    },
+    "@searchfe/promise": {
+      "version": "1.0.3",
+      "integrity": "sha512-BuAjgs8AW1A3dvvUfaXx46rhpLWiOF/2FPL/S51Mw+Z4bV/WczfxX+LF61VD3MOSpjkhDSsAwqQ7jTxuulr0Tg=="
+    },
+    "@searchfe/underscore": {
+      "version": "1.0.1",
+      "integrity": "sha512-H4iktWJdRcG0XYOKkHOZoOvZH7Ag/FTwMTFhCH91ojy8dh2opcP36UUs3X8Jz7t6DKcKWLGpQJWmS5GMDymm/g=="
+    },
+    "ralltiir": {
+      "version": "2.11.3"
+    },
+    "ralltiir-application": {
+      "version": "4.3.1"
+    }
+  }
+}

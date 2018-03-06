@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" data-for="rt-view" href="./common.css">
+  <script src="https://unpkg.cnpmjs.org/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+  <script src="./common.js"></script>
+</head>
+
+<body>
+  <div id="sfr-app">
+    <div class="rt-view error-handling">
+      <div class="rt-head">
+        <div class="rt-back"><rt-back><i class="fa fa-arrow-left"></i></rt-back></div>
+        <div class="rt-center">
+          <span class="rt-title">Error Handling</span>
+          <span class="rt-subtitle"></span>
+        </div>
+        <div class="rt-actions"><i class="fa fa-twitter"></i><i class="fa fa-share"></i></div>
+      </div>
+      <div class="rt-body">
+        <h2>Error Handling</h2>
+        <p>Upon network error, or inlined-script error, Ralltiir will navigate to the page directly (e.g. by `location.href = xxx`).</p>
+        <p>The url of the target page contains `rt-err` and `rt-msg` params which contains detailed information about the error. See following examples, note the result URL:</p>
+
+        <ul>
+          <li><a href="./errors/not-exist"
+            data-sf-href="/ralltiir-application-demo/errors/not-exist">A Page Not Exist</a></li>
+          <li><a href="./errors/bad-head"
+            data-sf-href="/ralltiir-application-demo/errors/bad-head">Bad .rt-head</a></li>
+          <li><a href="./errors/bad-body"
+            data-sf-href="/ralltiir-application-demo/errors/bad-body">Bad .rt-body</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

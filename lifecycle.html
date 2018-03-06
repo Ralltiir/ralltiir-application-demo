@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" data-for="rt-view" href="./common.css">
+  <script src="https://unpkg.cnpmjs.org/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+  <script src="./common.js"></script>
+</head>
+
+<body>
+  <div id="sfr-app">
+    <div class="rt-view lifecycle">
+      <div class="rt-head">
+        <script>
+        var view = document.querySelector('.lifecycle')
+        view.addEventListener('rt.willAttach', function () {
+          alert('rt.willAttach, this event can only be heard by cached views')
+        })
+        view.addEventListener('rt.attached', function () {
+          alert('rt.attached, the view is fetched and fully interactive')
+        })
+        view.addEventListener('rt.willDetach', function () {
+          alert('rt.willDetach, the view will be recycled')
+        })
+        view.addEventListener('rt.detached', function () {
+          alert('rt.detached, the view has already been recycled')
+        })
+        </script>
+        <link rel="stylesheet" href="./lifecycle.css">
+        <div class="rt-back">
+          <rt-back><i class="fa fa-arrow-left"></i></rt-back>
+        </div>
+        <div class="rt-center">
+          <span class="rt-title">Lifecycle Demo</span>
+          <span class="rt-subtitle"></span>
+        </div>
+        <div class="rt-actions"></div>
+      </div>
+      <div class="rt-body">
+        <h2>Lifecycle Demo</h2>
+        <p>This paragraph should have dark background after link[rel=stylesheet] loaded.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -14,7 +14,10 @@ define('ralltiir-application', function (require) {
 require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], function (rt, Service, View) {
     Service.setBackHtml('<i class="fa fa-arrow-left"></i>');
 
-    rt.services.register('/ralltiir-application-demo/home', {title: 'Ralltiir Application'}, Service);
+    rt.services.register('/ralltiir-application-demo/home', {
+        title: 'Ralltiir Application',
+        back: '<i class="fa fa-home"></i>'
+    }, Service);
     rt.services.register('/ralltiir-application-demo-vue/todolist', {
         title: 'Vue Todo List',
         backendUrl: '/ralltiir-application-demo-vue/todolist'
@@ -23,10 +26,26 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
         title: 'React Todo List',
         backendUrl: '/ralltiir-application-demo-react/todolist'
     }, Service);
-    rt.services.register('/ralltiir-application-demo/scroll-restore', {title: 'Scroll Restore'}, Service);
     rt.services.register('/ralltiir-application-demo/performance', {title: 'Performance'}, Service);
-    rt.services.register('/ralltiir-application-demo/partial-update', {title: 'Partial Update'}, Service);
-    rt.services.register('/ralltiir-application-demo/partial-update-advanced', {title: 'Partial Update'}, Service);
+    rt.services.register('/ralltiir-application-demo/scroll-restore', {
+        title: 'Scroll Restore',
+        actions: [
+          '<i class="fa fa-twitter"></i>',
+          '<i class="fa fa-share"></i>'
+        ]
+    }, Service);
+    rt.services.register('/ralltiir-application-demo/lifecycle', {title: 'Lifecycle Demo'}, Service);
+    rt.services.register('/ralltiir-application-demo/partial-update', {
+      title: 'Partial Update',
+      baseUrl: '/ralltiir-application-demo'
+    }, Service);
+    rt.services.register('/ralltiir-application-demo/partial-update-advanced', {
+      title: 'Partial Update',
+      baseUrl: '/ralltiir-application-demo'
+    }, Service);
+
+    rt.services.register('/ralltiir-application-demo/error-handling', {title: 'Error Handling'}, Service);
+    rt.services.register(/\/errors\//, null, Service);
 
     rt.action.start();
 });
