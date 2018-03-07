@@ -10,6 +10,15 @@ define('ralltiir', function (require) {
 define('ralltiir-application', function (require) {
     return require('ralltiir-application/service');
 });
+define('@searchfe/promise', function (require) {
+    return require('@searchfe/promise/src/promise');
+});
+define('@searchfe/underscore', function (require) {
+    return require('@searchfe/underscore/src/index');
+});
+define('@searchfe/assert', function (require) {
+    return require('@searchfe/assert/index');
+});
 
 require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], function (rt, Service, View) {
     Service.setBackHtml('<i class="fa fa-arrow-left"></i>');
