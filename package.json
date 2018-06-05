@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server .. -c-1",
+    "url": "echo visit: http://127.0.0.1:8077/ralltiir-application-demo/home?rt-debug",
+    "start": "npm run url && http-server .. -c-1 -p 8077",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "harttle <harttle@harttle.com>",
