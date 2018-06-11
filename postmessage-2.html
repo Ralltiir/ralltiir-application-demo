@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+  <link rel="stylesheet" data-for="rt-view" href="./common.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.js" integrity="sha256-uvn41VNPQ8aVNA6aS1Zjc2FUPkKq7ZgA6SzFiHkVgxs=" crossorigin="anonymous"></script>
+  <script src="./common.js"></script>
+</head>
+
+<body>
+  <div id="sfr-app">
+    <div class="rt-view">
+      <div class="rt-head">
+        <div class="rt-back"></div>
+        <div class="rt-center">
+          <span class="rt-title">Post Message - Sender</span>
+          <span class="rt-subtitle"></span>
+        </div>
+        <div class="rt-actions"></div>
+      </div>
+      <div class="rt-body">
+        <h2>Sending Message:</h2>
+        <input type="text" value="Something happened here" id="msgBox">
+        <button type="button" id="msgBtn">Click to Send</button>
+
+        <script>
+var view = document.currentScript.parentNode.parentNode;
+msgBtn.addEventListener('click', function () {
+    view.ralltiir.postMessage(msgBox.value);
+});
+        </script>
+
+        <p>Back to previous page to checkout messages.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
