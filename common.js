@@ -39,7 +39,6 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
         title: 'React Todo List',
         backendUrl: '/ralltiir-application-demo-react/todolist'
     }, Service);
-    rt.services.register('/ralltiir-application-demo/scroll-restore', {title: 'Scroll Restore'}, Service);
     rt.services.register(
         '/ralltiir-application-demo/postmessage-1',
         {name: 'foo', title: 'Post Message - Receiver'},
