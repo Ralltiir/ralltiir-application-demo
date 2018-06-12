@@ -67,6 +67,10 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
       title: 'Partial Update',
       baseUrl: '/ralltiir-application-demo'
     }, Service);
+    rt.services.register(/^\/ralltiir-application-demo\/disable-dispatch/, {
+      title: 'Disable Dispatch'
+    }, Service);
+
 
     rt.services.register('/ralltiir-application-demo/error-handling', {title: 'Error Handling'}, Service);
     rt.services.register(/\/errors\//, null, Service);
