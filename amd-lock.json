@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "dependencies": {
     "@searchfe/assert": {
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "integrity": "sha512-INeZlzcMK1ainjU9FpBf8jrqq7wzFF0eDb5JCrHpp/fMzdIlbdDfhM3bprtzrSmOo/rA7AdP4Ch8p4RNxuj2jg=="
     },
     "@searchfe/promise": {
       "version": "1.0.3",
@@ -17,7 +18,7 @@
       "version": "2.11.3"
     },
     "ralltiir-application": {
-      "version": "4.3.1"
+      "version": "4.4.6"
     }
   }
 }

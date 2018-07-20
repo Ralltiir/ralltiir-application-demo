@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" data-for="rt-view" href="./common.css">
+  <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+  <script src="./common.js"></script>
+</head>
+
+<body>
+  <div id="sfr-app">
+    <div class="rt-view disable-dispatch">
+      <div class="rt-head">
+        <div class="rt-back"><rt-back><i class="fa fa-arrow-left"></i></rt-back></div>
+        <div class="rt-center">
+          <span class="rt-title">disable dispatch</span>
+          <span class="rt-subtitle"></span>
+        </div>
+        <div class="rt-actions">
+          <i class="fa fa-twitter"></i><i class="fa fa-share"></i>
+        </div>
+      </div>
+      <div class="rt-body">
+        <div>
+          <button type="button" class="btn btn-primary" data-pushstate="/ralltiir-application-demo/disable-dispatch/a">Push A</button>
+          <button type="button" class="btn btn-primary" data-pushstate="/ralltiir-application-demo/disable-dispatch/b">Push B</button>
+          <button type="button" class="btn btn-primary" data-pushstate="/ralltiir-application-demo/disable-dispatch/c">Push C</button>
+        </div>
+        <br>
+        <div>
+          <button type="button" class="btn btn-primary" data-pushstate="/ralltiir-application-demo/disable-dispatch/super-a" data-subrouter="1">Super A</button>
+          <button type="button" class="btn btn-primary" data-pushstate="/ralltiir-application-demo/disable-dispatch/magic-b" data-subrouter="1">Magic B</button>
+          <button type="button" class="btn btn-primary" data-pushstate="/ralltiir-application-demo/disable-dispatch/trick-c" data-subrouter="1">Trick C</button>
+        </div>
+        <br>
+        <div>
+            <a class="btn btn-success" href="/ralltiir-application-demo/home" data-sf-href="/ralltiir-application-demo/home">Home</a>
+        </div>
+        <pre class="current-state" style="white-space: pre-wrap;"></pre>
+        <script src="./disable-dispatch.js"></script>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
