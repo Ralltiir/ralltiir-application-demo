@@ -11,6 +11,7 @@
   "author": "harttle <harttle@harttle.com>",
   "license": "ISC",
   "amdDependencies": {
+    "@searchfe/sandbox": "^1.5.1",
     "ralltiir": "*",
     "ralltiir-application": "*"
   },
