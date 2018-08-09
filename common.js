@@ -29,7 +29,7 @@ define('@searchfe/assert', function (require) {
     return require('@searchfe/assert/index');
 });
 
-function slideIn(service1, service2, options) {
+function dummyLoading(service1, service2, options) {
     var container = document.querySelector('#sfr-app');
     var loading = document.createElement('span');
     loading.innerText = 'Loading...没错，这就是 Loading，时长是 3s';
@@ -43,13 +43,35 @@ function slideIn(service1, service2, options) {
     }, 3000);
 }
 
+function toLegacy(service1, service2, options) {
+    var container = document.querySelector('#sfr-app');
+    service1.stop();
+    container.innerHTML = '';
+
+    Promise
+    .resolve(service2.beforeAttach(options.legacy.current, options.legacy.prev))
+    .then(() => service2.attach(options.legacy.current, options.legacy.prev));
+}
+
+function fromLegacy(service1, service2, options) {
+    var container = document.querySelector('#sfr-app');
+    Promise
+    .resolve(service1.beforeDetach(options.legacy.current, options.legacy.prev))
+    .then(() => service1.detach(options.legacy.current, options.legacy.prev))
+    .then(() => service2.renderTo(container));
+}
+
 require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], function (rt, Service, View) {
     Service.setBackHtml('<i class="fa fa-arrow-left"></i>');
 
-    rt.transitions.register({from: 'shell1', to: 'shell2', impl: slideIn});
-    rt.transitions.register({from: 'shell2', to: 'shell1', impl: slideIn});
-    rt.transitions.register({from: undefined, to: 'shell1'});
-    rt.transitions.register({from: undefined, to: 'shell2'});
+    rt.transitions.register({from: 'shell1', to: 'shell2', impl: dummyLoading});
+    rt.transitions.register({from: 'shell2', to: 'shell1', impl: dummyLoading});
+    rt.transitions.register({from: 'home', to: 'shell1', impl: fromLegacy});
+    rt.transitions.register({from: 'home', to: 'shell2', impl: fromLegacy});
+    rt.transitions.register({from: 'shell1', to: 'home', impl: toLegacy});
+    rt.transitions.register({from: 'shell2', to: 'home', impl: toLegacy});
+    rt.transitions.register({from: undefined, to: 'shell1', impl: x=>x});
+    rt.transitions.register({from: undefined, to: 'shell2', impl: x=>x});
 
     rt.services.register('/ralltiir-application-demo/shell-1', {
         name: 'shell1',
@@ -66,8 +88,9 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
         backendUrl: '/ralltiir-application-demo-vue/todolist'
     }, Service);
     rt.services.register('/ralltiir-application-demo/home', {
+        name: 'home',
         title: 'Ralltiir Application',
-    }, rt.Service);
+    }, Service);
     rt.services.register('/ralltiir-application-demo-react/todolist', {
         title: 'React Todo List',
         backendUrl: '/ralltiir-application-demo-react/todolist'
