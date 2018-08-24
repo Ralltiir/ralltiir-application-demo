@@ -77,12 +77,12 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
         name: 'shell1',
         title: 'AppShell Page 1',
         back: '<i class="fa fa-home"></i>'
-    }, rt.Service);
+    }, rt.Service || Service);
     rt.services.register('/ralltiir-application-demo/shell-2', {
         name: 'shell2',
         title: 'AppShell Page 2',
         back: '<i class="fa fa-home"></i>'
-    }, rt.Service);
+    }, rt.Service || Service);
     rt.services.register('/ralltiir-application-demo-vue/todolist', {
         title: 'Vue Todo List',
         backendUrl: '/ralltiir-application-demo-vue/todolist'
@@ -111,7 +111,10 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
         actions: [
           '<i class="fa fa-twitter"></i>',
           '<i class="fa fa-share"></i>'
-        ]
+        ],
+        loadingClass: 'rt-loading-no-highlight rt-loading-black',
+        headClass: 'rt-head-transparent',
+        background: '#000000'
     }, Service);
     rt.services.register('/ralltiir-application-demo/lifecycle', {title: 'Lifecycle Demo'}, Service);
     rt.services.register('/ralltiir-application-demo/partial-update', {
@@ -126,6 +129,13 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
       title: 'Disable Dispatch'
     }, Service);
 
+    rt.services.register('/ralltiir-application-demo/custom-transition-style', {
+        title: 'Custom Transition Style',
+        loadingClass: 'rt-loading-no-highlight rt-loading-black',
+        headClass: 'rt-head-transparent',
+        background: '#888888'
+    }, Service);
+    
 
     rt.services.register('/ralltiir-application-demo/error-handling', {title: 'Error Handling'}, Service);
     rt.services.register(/\/errors\//, null, Service);

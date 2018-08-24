@@ -7,8 +7,8 @@
       "integrity": "sha512-INeZlzcMK1ainjU9FpBf8jrqq7wzFF0eDb5JCrHpp/fMzdIlbdDfhM3bprtzrSmOo/rA7AdP4Ch8p4RNxuj2jg=="
     },
     "@searchfe/promise": {
-      "version": "1.0.3",
-      "integrity": "sha512-BuAjgs8AW1A3dvvUfaXx46rhpLWiOF/2FPL/S51Mw+Z4bV/WczfxX+LF61VD3MOSpjkhDSsAwqQ7jTxuulr0Tg=="
+      "version": "1.0.6",
+      "integrity": "sha512-HAds3MkVMIVS9uMcT6wqOQitUePBQvB0dupcT2gbydrJBIDEl9LSpiXghqOmkjzSbFhcwxtF45r6IqlTUFhSRw=="
     },
     "@searchfe/sandbox": {
       "version": "1.5.1",
@@ -19,12 +19,8 @@
       "integrity": "sha512-H4iktWJdRcG0XYOKkHOZoOvZH7Ag/FTwMTFhCH91ojy8dh2opcP36UUs3X8Jz7t6DKcKWLGpQJWmS5GMDymm/g=="
     },
     "ralltiir": {
-      "version": "2.11.3",
-      "integrity": "sha512-laiGaFq+HMZoucYVYJj/nW3TmxhXpN7r9Ci2NVsuBn9YjmUi3dplmvEqdUBqaCH4gEHEv1MoFEEH4hhaivJY4w=="
-    },
-    "ralltiir-application": {
-      "version": "4.4.6",
-      "integrity": "sha512-QD8uOEDbphCV1/VT5tfhQgWiXUXwDF+wAvdkzR+Vj+0OH9Ei07j137T2piu+/No9doyC6NG3ABZgHyi9+OTrzQ=="
+      "version": "2.13.0",
+      "integrity": "sha512-ze8YAobncytw1IZTcv+mYTH6MVpD15GqTdFmLW6DFUfwtT2VO11xAA5ZwOtXT7G9zdx8GjtuSrnPdTnPNR/LUg=="
     }
   }
 }
