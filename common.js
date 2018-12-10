@@ -138,6 +138,7 @@ require(['ralltiir', 'ralltiir-application', 'ralltiir-application/view/view'], 
     
 
     rt.services.register('/ralltiir-application-demo/error-handling', {title: 'Error Handling'}, Service);
+    rt.services.register('/ralltiir-application-demo/head-compressed', {title: 'Custom Head Compressed', compressedHead: true}, Service);
     rt.services.register(/\/errors\//, null, Service);
 
     rt.action.start();

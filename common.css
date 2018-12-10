@@ -160,3 +160,9 @@ h2, h3 {
 .rt-view .rt-head-transparent {
     background-color: transparent;
 }
+.rt-compressed .rt-head {
+    display: none;
+}
+.rt-compressed .rt-body {
+    padding-top: 0;
+}

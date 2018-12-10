@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.cnpmjs.org/bootstrap@4.0.0-beta.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" data-for="rt-view" href="./common.css">
+  <script src="https://unpkg.cnpmjs.org/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+  <script src="./common.js"></script>
+</head>
+
+<body>
+  <div id="sfr-app">
+    <div class="rt-view error-handling rt-compressed">
+      <div class="rt-head">
+        <div class="rt-back"><rt-back><i class="fa fa-arrow-left"></i></rt-back></div>
+        <div class="rt-center">
+          <span class="rt-title">Custom Head Compressed</span>
+          <span class="rt-subtitle"></span>
+        </div>
+        <div class="rt-actions"><i class="fa fa-twitter"></i><i class="fa fa-share"></i></div>
+      </div>
+      <div class="rt-body">
+        <h2>Head Compressed</h2>
+        <p>Compress rt-head when SRR and async render</p>
+
+        <ul>
+          <li>SSR: rt-view add Class `rt-compressed`</li>
+          <li>Asnyc: add service option `compressedHead: true` when regist<br></li>
+        </ul>
+        <textarea style = "width:100%; height:230px;">
+rt.services.register(
+  '/ralltiir-application-demo/head-compressed',
+  {
+    title: 'Custom Head Compressed',
+    compressedHead: true
+  },
+  Service
+);
+</textarea>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

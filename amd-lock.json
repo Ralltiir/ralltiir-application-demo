@@ -21,6 +21,10 @@
     "ralltiir": {
       "version": "2.13.0",
       "integrity": "sha512-ze8YAobncytw1IZTcv+mYTH6MVpD15GqTdFmLW6DFUfwtT2VO11xAA5ZwOtXT7G9zdx8GjtuSrnPdTnPNR/LUg=="
+    },
+    "ralltiir-application": {
+      "version": "4.5.16-0",
+      "integrity": "sha512-2hNzcbqvKWN3KZem5yPR6ZPqDABIj3mkG1yzuQ7cTuc6Gz2wlVRNciBn6PiGn52vH4o+atPMvL7NF0NB1RlOMw=="
     }
   }
 }

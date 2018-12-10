@@ -13,7 +13,7 @@
   "amdDependencies": {
     "@searchfe/sandbox": "^1.5.1",
     "ralltiir": "*",
-    "ralltiir-application": "*"
+    "ralltiir-application": "^4.5.16-0"
   },
   "dependencies": {
     "http-server": "^0.10.0"
